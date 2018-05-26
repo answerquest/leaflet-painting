@@ -30,3 +30,4 @@ cd ..
 ### Explanation
 - `find -name '*.png' -print0 | xargs -0 mogrify -format jpg` : This creates low-size .jpg versions of all the tiled images.
 - `find -name '*.png' -print0 | xargs -0 rm` : This deletes the .png tiles.
+- `gdal2tiles-multiprocess.py` : From the [gdal2times-leaflet](https://github.com/commenthol/gdal2tiles-leaflet) repo.
