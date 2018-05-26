@@ -5,7 +5,7 @@ The "zoomify" feature is quite well-known among the community working in this se
 
 [See a live implementation here.](http://nikhilvj.cu.cc.cp-48.bigrockservers.com/files/leaflet-painting/leaflet-painting.html)
 
-Source: an Indian painting from Delhi Museum uploade on [Wikimedia Commons in high-res](https://commons.wikimedia.org/wiki/Template:Radha_and_Krishna_in_the_boat_of_love_-_Google_Art_Project)
+Artwork Source: an Indian painting from the Kishengarh school of miniature paintings from Rajasthan, hosted at Nation Museum, New Delhi. Uploaded on Wikimedia Commons in high-res: [Radha and Krishna in the boat of love](https://commons.wikimedia.org/wiki/Template:Radha_and_Krishna_in_the_boat_of_love_-_Google_Art_Project), from 
 
 Note: These instructions are for Ubuntu machines. Inviting inputs for adapting to Windows systems.
 
