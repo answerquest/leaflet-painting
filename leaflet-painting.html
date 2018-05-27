@@ -3,8 +3,9 @@
 <head>
 <title>Using Leaflet map tech to explore intricate paintings and large photos</title>
 <meta charset="utf-8" />
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+<link rel="stylesheet" href="lib/leaflet.css" alt="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+<script src="lib/leaflet.js" alt="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+<script src="lib/leaflet-hash.js"></script>
 <style>
 
 html, body, #map {
@@ -25,26 +26,38 @@ html, body, #map {
 <script src='config.js'></script>
 <script>
 
-var imgMap = L.tileLayer(tilePath + '/{z}/{x}/{y}.jpg', {
+var imgMap = new L.tileLayer(tilePath + '/{z}/{x}/{y}' + extension, {
 	noWrap: true,
 	attribution: attributionHTML});
 
 var map = L.map('map', {
 	'center': [0,0],
-	'zoom': 2,
+	'zoom': 1,
 	'layers': imgMap,
 	'maxZoom': maxZoom
 });
 
+// URL hash so permalinks are possible. https://github.com/mlevans/leaflet-hash
+var hash = new L.Hash(map);
+
 // Show lat-long
 var popup = L.popup();
 function onMapClick(e) {
+	zoom = map.getZoom();
+	lat = e.latlng.lat.toFixed(2);
+	lng = e.latlng.lng.toFixed(2);
+	link = window.location.protocol + '//' + window.location.host + window.location.pathname +
+		'#' + zoom + '/' + lat + '/' + lng;
 	popup
 	.setLatLng(e.latlng)
-	.setContent('x: ' + e.latlng.lat.toFixed(2) + ', y: ' + e.latlng.lng.toFixed(2) + '<br>Zoom: ' + map.getZoom() )
+	.setContent('x: ' + lng + 
+		', y: ' + lat + 
+		'<br>Zoom: ' + zoom + 
+		'&nbsp;&nbsp;|&nbsp;&nbsp;<a href="' + link + '" title="right-click and copy">copy link</a>')
 	.openOn(map);
 }
 map.on('click', onMapClick); 
+
 
 </script>
 </body>
