@@ -33,11 +33,12 @@ cd ..
 - `find -name '*.png' -print0 | xargs -0 mogrify -format jpg` : This creates low-size .jpg versions of all the tiled images.
 - `find -name '*.png' -print0 | xargs -0 rm` : This deletes the .png tiles.
 - `gdal2tiles-multiprocess.py` : From the [gdal2times-leaflet](https://github.com/commenthol/gdal2tiles-leaflet) repo.
-- Variables:
-- - `tilePath` : name of the tiles folder
-- - `maxZoom` : see what is the highest number folder in the tiles folder
-- - `attributionHTML` : This HTML-encoded line will come at the bottom right of the webpage. Please cite the origins of the image you have tiled, link back to the source.
-- - `extension` : whether the tiles are in '.jpg' format or something else. (if you didn't apply the bulk png-to-jpg conversion commands above, they will likely be .png)
+
+#### Variables in `config.js`:
+- `tilePath` : name of the tiles folder
+- `maxZoom` : see what is the highest number folder in the tiles folder
+- `attributionHTML` : This HTML-encoded line will come at the bottom right of the webpage. Please cite the origins of the image you have tiled, link back to the source.
+- `extension` : whether the tiles are in '.jpg' format or something else. (if you didn't apply the bulk png-to-jpg conversion commands above, they will likely be .png)
 
 ### What more can we do with this?
 Check out [StoryMapJS for Images by Knightlab](https://storymap.knightlab.com/gigapixel/)
