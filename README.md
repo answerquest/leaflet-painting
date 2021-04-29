@@ -3,7 +3,7 @@ Recipe for tiling large images, and code to use them
 
 The "zoomify" feature is quite well-known among the community working in this sector, but there's lots of variations, old scripts don't work now etc. There are many museums out there that don't know that this is possible. I hammered out a recipe to get it done quickly and at efficient size. And code to use it. So sharing it here.
 
-[See a live implementation here.](http://nikhilvj.cu.cc.cp-48.bigrockservers.com/files/leaflet-painting/leaflet-painting.html)
+[See a live implementation here.](https://server.nikhilvj.co.in/tilemaker/leaflet-painting.html)
 
 Artwork Source: an Indian painting from the Kishengarh school of miniature paintings from Rajasthan, hosted at Nation Museum, New Delhi. Uploaded on Wikimedia Commons in high-res: [Radha and Krishna in the boat of love](https://commons.wikimedia.org/wiki/Template:Radha_and_Krishna_in_the_boat_of_love_-_Google_Art_Project), from 
 
@@ -11,7 +11,7 @@ Note: These instructions are for Ubuntu machines. Inviting inputs for adapting t
 
 ### Feature: Permalinks
 - You can save a permalink to what you're seeing by copying the addressbar URL or click a location and right-click > copy the link.
-- Share that with others to show them the exact portion of the painting you're talking about. Example: who're those [people on the hill](http://nikhilvj.cu.cc.cp-48.bigrockservers.com/files/leaflet-painting/leaflet-painting.html#6/61.449/-42.462)?; is she carrying a [small blackboard](http://nikhilvj.cu.cc.cp-48.bigrockservers.com/files/leaflet-painting/leaflet-painting.html#6/14.115/-15.721)?
+- Share that with others to show them the exact portion of the painting you're talking about. Example: who're those [people on the hill](https://server.nikhilvj.co.in/tilemaker/leaflet-painting.html#6/61.449/-42.462)?; is she carrying a [small blackboard](https://server.nikhilvj.co.in/tilemaker/leaflet-painting.html#6/14.115/-15.721)?
 - Thanks to the [leaflet-hash](https://github.com/mlevans/leaflet-hash) plugin.
 
 ### Steps
